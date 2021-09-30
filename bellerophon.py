@@ -413,6 +413,15 @@ def main():
 
     print(flush=True)
 
+    # Select which systems to gen
+    gen = input("Generate metadata.txt for all systems (" + str(configuration['systems']['available']) + ")? (Y/N): ")
+    print("")
+    if (gen.lower() == 'n') :
+        for sys in configuration['systems']['available'] :
+            gen = input("Generate file for \"" + sys + "\"? (Y/N): ")
+            if (gen.lower() == "n") :
+                configuration['systems']['available'].pop(sys, None)
+
     games = get_games(configuration['systems']['available'])
     media = get_media(configuration['systems']['available'])
 
@@ -465,11 +474,9 @@ def main():
 if __name__ == "__main__":
     start = datetime.now()
     BEGIN_MESSAGE = '''
-  ≠------------------------------------------------≠
-  ¦    * . BELLEROPHON * . *                       ¦
-  ¦                                                ¦
-  ¦              - a Pegasus-frontend companion    ¦
-  ≠------------------------------------------------≠
+* . BELLEROPHON * . *                   
+                                         
+           - a Pegasus-frontend companion
   '''
     print(BEGIN_MESSAGE)
 
