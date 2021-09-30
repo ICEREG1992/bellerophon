@@ -1,5 +1,7 @@
 <img src="images/logo_bellerophon.svg" width="60%" title="bellérophon, a pegasus-frontend companion" />
 
+**bellerophon** is a small python script which converts EmulationStation-style gamelist.xml files and scraper media folders into per-system metadata.txt files for use with the Pegasus emulation frontend.
+
 The idea is : **multiple** folders full of games, **multiple** gamelist.xml (EmulationStation) files, **1** configuration file to determine global/per system preferences.
 And one Bellerophon to kick the ass of the chimera.
 
