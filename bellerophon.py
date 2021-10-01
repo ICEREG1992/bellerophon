@@ -419,7 +419,7 @@ def main():
     if (gen.lower() == 'n') :
         rem = []
         for sys in configuration['systems']['available'] :
-            gen = input("Generate file for \"" + sys + "\"? (Y/N): ")
+            gen = input("  > Generate file for \"" + sys + "\"? (Y/N): ")
             if (gen.lower() == "n") :
                 rem.append(sys)
         for sys in rem:
@@ -471,7 +471,8 @@ def main():
 
     # for not_found_system in configuration['systems']['available']:
     # print(f"Not found systems : {', '.join(configuration['systems']['unavailable'])}")
-    print(f"  [!] Not found systems : {', '.join(configuration['systems']['unavailable'])}")
+    if len(configuration['systems']['unavailable']) > 0 :
+        print(f"  [!] Not found systems : {', '.join(configuration['systems']['unavailable'])}")
 
 
 if __name__ == "__main__":
@@ -495,4 +496,3 @@ if __name__ == "__main__":
   Hope the script was helpful. . * * . . . * . * * . .
     '''
     print(END_MESSAGE)
-    input("")
