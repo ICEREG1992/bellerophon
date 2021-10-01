@@ -1,12 +1,12 @@
 <img src="images/logo_bellerophon.svg" width="60%" title="bellérophon, a pegasus-frontend companion" />
 
-**bellerophon** is a small python script which converts EmulationStation-style gamelist.xml files and scraper media folders into per-system metadata.txt files for use with the Pegasus emulation frontend.
+**bellerophon** is a small python script which converts EmulationStation-style gamelist.xml files and scraper media folders into per-system metadata.txt files for use with the Pegasus emulation frontend. This fork of bellerophon fixes a text encoding bug with the original's boot message, allows for selecting which systems you'd like to generate metadata.txt files for (to prevent overwriting manual changes, for instance), and slightly tweaks console output.
 
 The idea is : **multiple** folders full of games, **multiple** gamelist.xml (EmulationStation) files, **1** configuration file to determine global/per system preferences.
 And one Bellerophon to kick the ass of the chimera.
 
-> For now i test and develop the script for my own use-case, e.g : Pegasus-frontend + Shield TV (Android), one `collection` (system) per metadata.txt
-If you want it to work for your need, or simply work (because there is a bug that i have not seen), do not hesitate to let me know. Thank you. :)
+> For now the script is tested and developed for the author's own use-case, i.e. Pegasus-frontend + Shield TV (Android), one `collection` (system) per metadata.txt
+Modifying the script should be relatively simple as it's all contained in a single .py file, so feel free to fork and edit to your liking.
 
 ## Quick tutorial video
 https://www.youtube.com/watch?v=Jhuww7Jl6N0
@@ -16,7 +16,7 @@ https://www.youtube.com/watch?v=Jhuww7Jl6N0
 
 Pegasus is a front-end to navigate in your games library. It relies on metadata.txt files that contain all data about games, paths and assets.
 
-## What does Bellerophon ?
+## What all can Bellerophon do?
 Bellerophon is a Python script to :
 - generate metadata files
 - clean media library (unused assets). No need of the gamelist.xml for that.
@@ -32,7 +32,7 @@ You can type : `pip install requirements.txt`
 
 Or : `python -m pip install toml`
 
-Developed in a Python 3.6 environment.
+Developed in a Python 3.9.6 environment.
 
 In order to work the script also needs :
 
