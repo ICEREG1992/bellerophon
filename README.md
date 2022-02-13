@@ -30,7 +30,7 @@ Module to install (TOML) : https://pypi.org/project/toml/
 
 You can type : `pip install requirements.txt`
 
-Or : `python -m pip install toml`
+Or : `py -m pip install toml`
 
 Developed in a Python 3.9.6 environment.
 
