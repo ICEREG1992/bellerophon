@@ -414,7 +414,7 @@ def main():
     print(flush=True)
 
     # Select which systems to gen
-    gen = input("  > Generate metadata.txt for all systems (" + ", ".join(str(key) for key in configuration['systems']['available'].keys()) + ")? (Y/N): ")
+    gen = input("  > Generate metadata.txt for all systems (" + ", ".join(str(key) for key in configuration['systems']['available'].keys()) + ")? (Y/n): ")
     start = datetime.now()
     print("")
     if (gen.lower() == 'n') :
