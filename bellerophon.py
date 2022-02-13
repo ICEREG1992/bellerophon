@@ -415,6 +415,7 @@ def main():
 
     # Select which systems to gen
     gen = input("  > Generate metadata.txt for all systems (" + ", ".join(str(key) for key in configuration['systems']['available'].keys()) + ")? (Y/N): ")
+    start = datetime.now()
     print("")
     if (gen.lower() == 'n') :
         rem = []
@@ -473,19 +474,19 @@ def main():
     # print(f"Not found systems : {', '.join(configuration['systems']['unavailable'])}")
     if len(configuration['systems']['unavailable']) > 0 :
         print(f"  [!] Not found systems : {', '.join(configuration['systems']['unavailable'])}")
+    return start
 
 
 if __name__ == "__main__":
-    start = datetime.now()
     BEGIN_MESSAGE = '''
 * . BELLEROPHON * . *                   
                                          
            - a Pegasus-frontend companion
   '''
     print(BEGIN_MESSAGE)
-
+    start = datetime.now()
     try:
-        main()
+        start = main()
     except ValueError as err:
         print(err)
 
