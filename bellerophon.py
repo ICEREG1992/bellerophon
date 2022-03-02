@@ -420,7 +420,7 @@ def main():
     if (gen.lower() == 'n') :
         rem = []
         for sys in configuration['systems']['available'] :
-            gen = input("  > Generate file for \"" + sys + "\"? (Y/N): ")
+            gen = input("  > Generate file for \"" + sys + "\"? (Y/n): ")
             if (gen.lower() == "n") :
                 rem.append(sys)
         for sys in rem:
