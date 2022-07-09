@@ -415,7 +415,6 @@ def main():
 
     # Select which systems to gen
     gen = input("  > Generate metadata.txt for all systems (" + ", ".join(str(key) for key in configuration['systems']['available'].keys()) + ")? (Y/n): ")
-    start = datetime.now()
     print("")
     if (gen.lower() == 'n') :
         rem = []
@@ -425,7 +424,8 @@ def main():
                 rem.append(sys)
         for sys in rem:
             configuration['systems']['available'].pop(sys, None)
-
+        
+    start = datetime.now()
     games = get_games(configuration['systems']['available'])
     media = get_media(configuration['systems']['available'])
 
