@@ -1,6 +1,6 @@
 <img src="images/logo_bellerophon.svg" width="60%" title="bellérophon, a pegasus-frontend companion" />
 
-**bellerophon** is a small python script which converts EmulationStation-style gamelist.xml files and scraper media folders into per-system metadata.txt files for use with the Pegasus emulation frontend. This fork of bellerophon fixes a text encoding bug with the original's boot message, allows for selecting which systems you'd like to generate metadata.txt files for (to prevent overwriting manual changes, for instance), and slightly tweaks console output.
+**bellerophon** is a small python script which converts EmulationStation-style gamelist.xml files and scraper media folders into per-system metadata.txt files for use with the Pegasus emulation frontend. **This fork of bellerophon fixes a text encoding bug with the original's boot message, allows for selecting which systems you'd like to generate metadata.txt files for (to prevent overwriting manual changes, for instance), and slightly tweaks console output.**
 
 The idea is : **multiple** folders full of games, **multiple** gamelist.xml (EmulationStation) files, **1** configuration file to determine global/per system preferences.
 And one Bellerophon to kick the ass of the chimera.
